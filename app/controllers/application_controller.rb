@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts/:id/delete' do
-        binding.pry
+    binding.pry
     @post = Post.find(params[:id])
     @post.destroy
     erb :delete
