@@ -5,5 +5,5 @@ ID: <%=@post.id%>
 <form action="/posts/<%= @post.id %>/delete" method ="post">
 <input id="hidden" type="hidden" name="_method" value="delete">
 <br>
-<button type="submit">Delete</button>
+<button type="submit" id="delete">Delete</button>
 </form>
