@@ -27,6 +27,12 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
+  post '/posts/:id/delete' do
+    @post = Post.find(params[:id])
+    @post.delete
+    erb :edit
+  end
+
   get '/posts/:id' do
     #binding.pry
     @post = Post.find(params[:id])
