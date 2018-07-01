@@ -2,5 +2,5 @@ Name: <%=@post.name%><br>
 Content: <%=@post.content%>
 ID: <%=@post.id%>
 
-<form action="/posts/<%=@post.id%>/delete method=post"
+<form action="/posts/<%= @post.id%>/delete" method ="post">
 <input id="hidden" type="hidden" name="_method" value="patch">
